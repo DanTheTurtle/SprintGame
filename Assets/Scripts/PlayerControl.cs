@@ -13,16 +13,25 @@ public class PlayerControl : MonoBehaviour
     private float jumpForce = 500f;
     private Boolean hasRejump = true; //?
 
+    private Vector3 origScale;
+    private bool isjumpedin = false;
+    private bool canjumpin = false;
+    private bool isjumping = false;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         cc = GetComponent<CircleCollider2D>();
+        origScale = transform.localScale;
     }
 
     void Update()
     {
         float horzIn = Input.GetAxis("Horizontal");
-        transform.position = transform.position + new Vector3(horzIn * speed * Time.deltaTime, 0, 0);
+        if(!isjumpedin) {
+            transform.position = transform.position + new Vector3(horzIn * speed * Time.deltaTime, 0, 0);
+        }
 
         if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
@@ -39,6 +48,23 @@ public class PlayerControl : MonoBehaviour
             rb.velocity = (Vector2.up * jumpVelo * -1);
         }*/
 
+        if(canjumpin && Input.GetKeyDown(KeyCode.DownArrow)) {
+            this.gameObject.transform.localScale = new Vector3(0,0,0);
+            isjumpedin = true;
+        }
+
+        if(isjumpedin && Input.GetKeyDown(KeyCode.UpArrow)) {
+            Debug.Log("Jumped out");
+            this.gameObject.transform.localScale = origScale;
+            isjumpedin = false;
+            canjumpin = false;
+            transform.parent = null;
+        }
+
+        if(transform.parent != null) {
+            transform.position = new Vector3(transform.parent.position.x, transform.parent.position.y, transform.parent.position.z);
+        }
+
         if (IsGrounded())
         {
             refreshJump();
@@ -54,5 +80,17 @@ public class PlayerControl : MonoBehaviour
         RaycastHit2D raycastHit2D = Physics2D.CircleCast(cc.bounds.center, cc.radius, Vector2.down, .01f, groundMask);
         //Debug.Log(raycastHit2D.collider);
         return raycastHit2D.collider != null;
+    }
+
+    void OnCollisionEnter2D(Collision2D col) {
+        if("CanJumpIn".Equals(col.gameObject.tag)) {
+            Debug.Log("Iscolliding");
+            if(!isjumpedin) {
+                canjumpin = true;
+            }
+            if(isjumpedin) {
+                transform.SetParent(col.transform);
+            }
+        }
     }
 }
