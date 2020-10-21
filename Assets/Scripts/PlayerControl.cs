@@ -12,18 +12,13 @@ public class PlayerControl : MonoBehaviour
     private float jumpVelo = 17f;
     private float jumpForce = 500f;
     private Boolean hasRejump = true; //?
-
-    private Vector3 origScale;
     private bool isjumpedin = false;
     private bool canjumpin = false;
-    private bool isjumping = false;
-
-
+    private GameObject intObj;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         cc = GetComponent<CircleCollider2D>();
-        origScale = transform.localScale;
     }
 
     void Update()
@@ -50,15 +45,17 @@ public class PlayerControl : MonoBehaviour
 
         if(canjumpin && Input.GetKeyDown(KeyCode.DownArrow)) {
             this.gameObject.transform.localScale = new Vector3(0,0,0);
+            transform.SetParent(intObj.transform);
             isjumpedin = true;
         }
 
         if(isjumpedin && Input.GetKeyDown(KeyCode.UpArrow)) {
             Debug.Log("Jumped out");
-            this.gameObject.transform.localScale = origScale;
-            isjumpedin = false;
-            canjumpin = false;
             transform.parent = null;
+            this.gameObject.transform.localScale = new Vector3(1,1,1);
+            isjumpedin = false;
+            rb.velocity = Vector2.up * jumpVelo;
+
         }
 
         if(transform.parent != null) {
@@ -84,13 +81,14 @@ public class PlayerControl : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col) {
         if("CanJumpIn".Equals(col.gameObject.tag)) {
-            Debug.Log("Iscolliding");
-            if(!isjumpedin) {
-                canjumpin = true;
-            }
-            if(isjumpedin) {
-                transform.SetParent(col.transform);
-            }
+            canjumpin = true;
+            intObj = col.gameObject;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D col) {
+        if(canjumpin) {
+            canjumpin = false;
         }
     }
 }
