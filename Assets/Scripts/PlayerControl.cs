@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private LayerMask groundMask;
     private Rigidbody2D rb;
     private CircleCollider2D cc; //? maybe keep as circle, should not matter much
+    private Transform lastCheck;
     private float speed = 7f;
     private float jumpVelo = 17f;
     private float jumpForce = 500f;
@@ -17,6 +18,7 @@ public class PlayerControl : MonoBehaviour
     private GameObject intObj;
     void Start()
     {
+        lastCheck = transform;
         rb = GetComponent<Rigidbody2D>();
         cc = GetComponent<CircleCollider2D>();
     }
@@ -26,6 +28,11 @@ public class PlayerControl : MonoBehaviour
         float horzIn = Input.GetAxis("Horizontal");
         if(!isjumpedin) {
             transform.position = transform.position + new Vector3(horzIn * speed * Time.deltaTime, 0, 0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            killPlayer();
         }
 
         if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
@@ -80,10 +87,19 @@ public class PlayerControl : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D col) {
-        if("CanJumpIn".Equals(col.gameObject.tag)) {
+        if("Checkpoint".Equals(col.gameObject.tag)) {
+            lastCheck = col.transform;
+        }
+        else if ("CanJumpIn".Equals(col.gameObject.tag))
+        {
             canjumpin = true;
             intObj = col.gameObject;
         }
+    }
+
+    private void killPlayer()
+    {
+        transform.position = lastCheck.position;
     }
 
     void OnCollisionExit2D(Collision2D col) {
