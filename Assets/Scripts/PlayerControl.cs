@@ -15,6 +15,8 @@ public class PlayerControl : MonoBehaviour
     private Boolean hasRejump = true; //?
     private bool isjumpedin = false;
     private bool canjumpin = false;
+    private bool canjumpinmv = false;
+    private bool isjumpedinmv = false;
     private GameObject intObj;
     void Start()
     {
@@ -35,7 +37,7 @@ public class PlayerControl : MonoBehaviour
             killPlayer();
         }
 
-        if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
+        if (!isjumpedinmv && IsGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = Vector2.up * jumpVelo;
         }
@@ -52,21 +54,32 @@ public class PlayerControl : MonoBehaviour
 
         if(canjumpin && Input.GetKeyDown(KeyCode.DownArrow)) {
             this.gameObject.transform.localScale = new Vector3(0,0,0);
-            transform.SetParent(intObj.transform);
             isjumpedin = true;
+        } else if (canjumpinmv && Input.GetKeyDown(KeyCode.DownArrow)){
+            this.gameObject.transform.localScale = new Vector3(0,0,0);
+            isjumpedinmv = true;
         }
 
         if(isjumpedin && Input.GetKeyDown(KeyCode.UpArrow)) {
-            Debug.Log("Jumped out");
-            transform.parent = null;
+            // Debug.Log("Jumped out");
             this.gameObject.transform.localScale = new Vector3(1,1,1);
             isjumpedin = false;
             rb.velocity = Vector2.up * jumpVelo;
-
         }
 
-        if(transform.parent != null) {
-            transform.position = new Vector3(transform.parent.position.x, transform.parent.position.y, transform.parent.position.z);
+        if(isjumpedinmv && Input.GetKeyDown(KeyCode.UpArrow)) {
+            // Debug.Log("Jumped out");
+            this.gameObject.transform.localScale = new Vector3(1,1,1);
+            isjumpedinmv = false;
+            rb.velocity = Vector2.up * jumpVelo;
+        }
+
+        if(isjumpedin) {
+            transform.position = intObj.transform.position; 
+        } 
+
+        if(isjumpedinmv) {
+            intObj.transform.position = new Vector3(this.gameObject.transform.position.x, intObj.transform.position.y, intObj.transform.position.z);
         }
 
         if (IsGrounded())
@@ -94,6 +107,9 @@ public class PlayerControl : MonoBehaviour
         {
             canjumpin = true;
             intObj = col.gameObject;
+        } else if("CanJumpInMV".Equals(col.gameObject.tag)) {
+            canjumpinmv = true;
+            intObj = col.gameObject;
         }
     }
 
@@ -105,6 +121,9 @@ public class PlayerControl : MonoBehaviour
     void OnCollisionExit2D(Collision2D col) {
         if(canjumpin) {
             canjumpin = false;
+        }
+        if(canjumpinmv) {
+            canjumpinmv = false;
         }
     }
 }
