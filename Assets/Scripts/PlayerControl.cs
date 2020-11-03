@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 //? Dan comments
 public class PlayerControl : MonoBehaviour
@@ -8,11 +9,13 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private LayerMask groundMask;
     private Rigidbody2D rb;
     private CircleCollider2D cc; //? maybe keep as circle, should not matter much
-    private Transform lastCheck;
-    private float speed = 7f;
-    private float jumpVelo = 17f;
+    private Transform lastCheckpoint;//? last checkpoint collided by player
+    public float speed = 9f;
+    public float jumpVelo = 17f;
+    private float velocityx = 0f;
+    private float accelerationx = 12f;
     private float jumpForce = 500f;
-    private Boolean hasRejump = true; //?
+    private Boolean hasRejump = false; //?
     private bool isjumpedin = false;
     private bool canjumpin = false;
     private bool canjumpinmv = false;
@@ -20,22 +23,29 @@ public class PlayerControl : MonoBehaviour
     private GameObject intObj;
     void Start()
     {
-        lastCheck = transform;
+        lastCheckpoint = transform;
         rb = GetComponent<Rigidbody2D>();
         cc = GetComponent<CircleCollider2D>();
     }
 
     void Update()
     {
-        float horzIn = Input.GetAxis("Horizontal");
-        if(!isjumpedin) {
-            transform.position = transform.position + new Vector3(horzIn * speed * Time.deltaTime, 0, 0);
-        }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
             killPlayer();
         }
+
+        velocityx =+ accelerationx * Input.GetAxis("Horizontal");
+        if (Mathf.Abs(velocityx) > speed )
+        {
+            velocityx = speed * Input.GetAxis("Horizontal");
+        }
+
+        if(!isjumpedin && rb.gravityScale == 3.5) {
+            transform.position = transform.position + new Vector3(velocityx * Time.deltaTime, 0, 0);
+        }
+
 
         if (!isjumpedinmv && IsGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
@@ -46,14 +56,11 @@ public class PlayerControl : MonoBehaviour
             hasRejump = false;
             rb.velocity = Vector2.up * jumpVelo;
         }
-        //? relic of old game
-        /*else if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            rb.velocity = (Vector2.up * jumpVelo * -1);
-        }*/
+
 
         if(canjumpin && Input.GetKeyDown(KeyCode.DownArrow)) {
             this.gameObject.transform.localScale = new Vector3(0,0,0);
+            transform.SetParent(intObj.transform,true);
             isjumpedin = true;
         } else if (canjumpinmv && Input.GetKeyDown(KeyCode.DownArrow)){
             this.gameObject.transform.localScale = new Vector3(0,0,0);
@@ -61,24 +68,28 @@ public class PlayerControl : MonoBehaviour
         }
 
         if(isjumpedin && Input.GetKeyDown(KeyCode.UpArrow)) {
-            // Debug.Log("Jumped out");
+            UnityEngine.Debug.Log("Jumped out");
+            transform.parent = null;
             this.gameObject.transform.localScale = new Vector3(1,1,1);
             isjumpedin = false;
             rb.velocity = Vector2.up * jumpVelo;
         }
+        
 
-        if(isjumpedinmv && Input.GetKeyDown(KeyCode.UpArrow)) {
+        if (isjumpedinmv && Input.GetKeyDown(KeyCode.UpArrow)) {
             // Debug.Log("Jumped out");
             this.gameObject.transform.localScale = new Vector3(1,1,1);
             isjumpedinmv = false;
             rb.velocity = Vector2.up * jumpVelo;
         }
 
-        if(isjumpedin) {
-            transform.position = intObj.transform.position; 
-        } 
+        if (isjumpedin)
+        {
+            transform.position = intObj.transform.position;
+        }
 
-        if(isjumpedinmv) {
+        if (isjumpedinmv)
+        {
             intObj.transform.position = new Vector3(this.gameObject.transform.position.x, intObj.transform.position.y, intObj.transform.position.z);
         }
 
@@ -90,7 +101,7 @@ public class PlayerControl : MonoBehaviour
 
     //private void OnTriggerEnter2D(Collider2D collider)
 
-    public void refreshJump() { hasRejump = true; }
+    public void refreshJump() { hasRejump = false; }
 
     private bool IsGrounded()
     {
@@ -101,7 +112,8 @@ public class PlayerControl : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col) {
         if("Checkpoint".Equals(col.gameObject.tag)) {
-            lastCheck = col.transform;
+            lastCheckpoint = col.transform;
+            col.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
         }
         else if ("CanJumpIn".Equals(col.gameObject.tag))
         {
@@ -111,12 +123,24 @@ public class PlayerControl : MonoBehaviour
             canjumpinmv = true;
             intObj = col.gameObject;
         }
+        else if ("Kill".Equals(col.gameObject.tag))
+        {
+            BeginKillPlayer();
+        }
     }
-
+    private void BeginKillPlayer()
+    {
+        //TODO some death animation with smoke
+        //Invoke("killPlayer", 5.0f);
+        killPlayer();
+    }
     private void killPlayer()
     {
-        transform.position = lastCheck.position;
+        rb.gravityScale = 3.5f;
+        refreshJump();
+        transform.position = lastCheckpoint.position;
     }
+
 
     void OnCollisionExit2D(Collision2D col) {
         if(canjumpin) {

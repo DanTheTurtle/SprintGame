@@ -6,6 +6,7 @@ public class LookAtMouse : MonoBehaviour
 {
     public float factor = 0.25f;
     public float limit = 0.08f;
+    public float lockZaxis = -0.3f;
 
     private Vector3 center;
 
@@ -25,7 +26,7 @@ public class LookAtMouse : MonoBehaviour
 
         //Clamp the dir target
         dir = Vector3.ClampMagnitude(dir, limit);
-        dir.z = -1.7f;
+        dir.z = lockZaxis;
 
         //Update the pupil position
         transform.position = transform.parent.position + dir;
