@@ -5,7 +5,7 @@ using UnityEngine;
 public class IntObjScript : MonoBehaviour
 {
 
-    float step = 0.001f;
+    float step = 0.01f;
     // Start is called before the first frame update
     void Start()
     {
