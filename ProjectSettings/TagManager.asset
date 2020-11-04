@@ -6,8 +6,7 @@ TagManager:
   tags:
   - Checkpoint
   - CanJumpIn
-  - Kill
-  - CanJumpInMV
+  - Rain
   layers:
   - Default
   - TransparentFX
@@ -19,9 +18,9 @@ TagManager:
   - 
   - Ground
   - Kill
-  - Combustable
-  - WillNotBreak
-  - Player
+  - Wall
+  - 
+  - 
   - 
   - 
   - 
