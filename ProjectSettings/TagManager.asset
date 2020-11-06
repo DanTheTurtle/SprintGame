@@ -11,6 +11,12 @@ TagManager:
   - Combustable
   - WillNotBreak
   - Collectable
+  - MovementText
+  - WaterText
+  - CheckpointText
+  - CoalText
+  - RopeText
+  - JumpInOutText
   layers:
   - Default
   - TransparentFX
@@ -25,7 +31,7 @@ TagManager:
   - Wall
   - Player
   - Checkpoint
-  - 
+  - PlayerTutorial
   - 
   - 
   - 
@@ -47,4 +53,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UILayer
+    uniqueID: 2702163525
     locked: 0
