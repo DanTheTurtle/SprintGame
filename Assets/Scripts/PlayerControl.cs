@@ -30,6 +30,8 @@ public class PlayerControl : MonoBehaviour
     public Text coalText;
     private float coalCount = 0f;
 
+    public Text message;
+
     void Start()
     {
         lastCheckpoint = transform;
@@ -86,7 +88,7 @@ public class PlayerControl : MonoBehaviour
             this.gameObject.transform.localScale = new Vector3(0,0,0);
             transform.SetParent(intObj.transform, true);
             isjumpedin = true;
-            currentHealth += 25;
+            currentHealth += 15;
         }
 
         if(isjumpedin && Input.GetKeyDown(KeyCode.UpArrow)) {
@@ -108,14 +110,16 @@ public class PlayerControl : MonoBehaviour
         }
 
         //Health Depletion
-        currentHealth -= coef * Time.deltaTime;
+        if(currentHealth > 0){
+            currentHealth -= coef * Time.deltaTime;
+        }
         healthBar.SetHealth(currentHealth);
     }
 
     private void OnTriggerEnter2D(Collider2D collider){
         //rain damage
         if("Rain".Equals(collider.gameObject.tag)){
-            TakeDamage(20);
+            TakeDamage(5);
         }
         else if ("Collectable".Equals(collider.gameObject.tag))
         {
@@ -153,6 +157,33 @@ public class PlayerControl : MonoBehaviour
         {
             BeginKillPlayer();
         }
+        //PlayerTutorial
+        if ("MovementText".Equals(col.gameObject.tag))
+        {
+            message.text = "Use W, A, S, D to move and SPACE to jump.";
+            col.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            Debug.Log("movement triggered");
+        }else if ("CheckpointText".Equals(col.gameObject.tag))
+        {
+            message.text = "The Orange Triangles are checkpoints to respawn and/or restore health. Be sure to jump on them to set checkpoint.";
+            col.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }else if ("CoalText".Equals(col.gameObject.tag))
+        {
+            message.text = "Collect Coal for Points.";
+            col.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }else if ("WaterText".Equals(col.gameObject.tag))
+        {
+            message.text = "Your health depletes over time so be careful of Rain and Water Puddles which add more damage. You can also press 'R' to respawn.";
+            col.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }else if ("JumpInOutText".Equals(col.gameObject.tag))
+        {
+            message.text = "You can restore health by jumping in and out of the rectangle Torch. Use the UP and Down arrows.";
+            col.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }else if ("RopeText".Equals(col.gameObject.tag))
+        {
+            message.text = "Burn through the rope to get to the other side.";
+            col.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }
     }
 
     private void BeginKillPlayer()
@@ -183,6 +214,9 @@ public class PlayerControl : MonoBehaviour
     void TakeDamage(int damage){
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+        if(currentHealth <= 0){
+            BeginKillPlayer();
+        }
     }
 
 
