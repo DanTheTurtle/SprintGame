@@ -9878,9 +9878,9 @@ GameObject:
   - component: {fileID: 3218114636753947437}
   - component: {fileID: 3218114636753947438}
   - component: {fileID: 2382618256262598791}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: rope 1
-  m_TagString: Untagged
+  m_TagString: Combustable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14754,7 +14754,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 3895
+    m_Bits: 1847
   m_RotationalOffset: 45.8
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
