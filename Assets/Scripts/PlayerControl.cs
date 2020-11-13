@@ -7,10 +7,12 @@ using UnityEngine.UI;
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private LayerMask groundMask;
+    [SerializeField] private LayerMask explosionMask;
     private Rigidbody2D rb;
     private CircleCollider2D cc; //? maybe keep as circle, should not matter much
     private float speed = 7f;
     private float jumpVelo = 17f;
+    private float explVelo = 50f;
     private float velocityx = 0f;
     private float accelerationx = 12f;
     private float jumpForce = 500f;
@@ -29,6 +31,8 @@ public class PlayerControl : MonoBehaviour
 
     public Text coalText;
     private float coalCount = 0f;
+    public GameObject coalSpawnPoint;
+
 
     public Text message;
 
@@ -46,12 +50,13 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
-
+        //Respawn player
         if (Input.GetKeyDown(KeyCode.R))
         {
             BeginKillPlayer();
         }
 
+        //Player movement
         velocityx =+ accelerationx * Input.GetAxis("Horizontal");
         if (Mathf.Abs(velocityx) > speed)
         {
@@ -63,12 +68,7 @@ public class PlayerControl : MonoBehaviour
             transform.position = transform.position + new Vector3(velocityx * Time.deltaTime, 0, 0);
         }
 
-
-
-
-
-
-
+        //Player jumping
         if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = Vector2.up * jumpVelo;
@@ -78,35 +78,53 @@ public class PlayerControl : MonoBehaviour
             hasRejump = false;
             rb.velocity = Vector2.up * jumpVelo;
         }
+        
+        if (IsGrounded())
+        {
+            refreshJump();
+        } 
         //? relic of old game
         /*else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             rb.velocity = (Vector2.up * jumpVelo * -1);
         }*/
 
+        //Jump in and out functionality
         if(canjumpin && Input.GetKeyDown(KeyCode.DownArrow)) {
             this.gameObject.transform.localScale = new Vector3(0,0,0);
-            transform.SetParent(intObj.transform, true);
             isjumpedin = true;
+            currentHealth += 15;
+        } else if (canjumpinmv && Input.GetKeyDown(KeyCode.DownArrow)) {
+            this.gameObject.transform.localScale = new Vector3(0,0,0);
+            isjumpedinmv = true;
             currentHealth += 15;
         }
 
+        if(isjumpedin) {
+            transform.position = intObj.transform.position;
+        } else if (isjumpedinmv) {
+            intObj.transform.position = new Vector3(this.transform.position.x, intObj.transform.position.y, intObj.transform.position.z);
+        }
         if(isjumpedin && Input.GetKeyDown(KeyCode.UpArrow)) {
-            UnityEngine.Debug.Log("Jumped out");
-            transform.parent = null;
             this.gameObject.transform.localScale = new Vector3(1,1,1);
             isjumpedin = false;
             rb.velocity = Vector2.up * jumpVelo;
-
+        } else if (isjumpedinmv && Input.GetKeyDown(KeyCode.UpArrow)) {
+            this.gameObject.transform.localScale = new Vector3(1,1,1);
+            isjumpedinmv = false;
+            rb.velocity = Vector2.up * jumpVelo;
         }
 
-        if(transform.parent != null) {
-            transform.position = new Vector3(transform.parent.position.x, transform.parent.position.y, transform.parent.position.z);
+        //Coal throwing && decrement
+        if(coalCount != 0 && Input.GetKeyDown(KeyCode.E)) {
+            Debug.Log("Coal thrown");
+            coalSpawnPoint.GetComponent<CoalSpawner>().Spawn();
+            decrementCoal(1);
         }
 
-        if (IsGrounded())
-        {
-            refreshJump();
+        //Explosive ground code
+        if(onExplosive()) {
+            rb.velocity = Vector2.up * explVelo;
         }
 
         //Health Depletion
@@ -128,8 +146,16 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
+    //Checks if player has already double jumped
     public void refreshJump() { hasRejump = false; }
 
+    //Checks if player is on an explosive panel
+    private bool onExplosive() {
+        RaycastHit2D raycastHit2D = Physics2D.CircleCast(cc.bounds.center, cc.radius, Vector2.down, .01f, explosionMask);
+        return raycastHit2D.collider != null;
+    }
+
+    //Checks if player is on ground
     private bool IsGrounded()
     {
         RaycastHit2D raycastHit2D = Physics2D.CircleCast(cc.bounds.center, cc.radius, Vector2.down, .01f, groundMask);
@@ -144,6 +170,10 @@ public class PlayerControl : MonoBehaviour
             canjumpin = true;
             intObj = col.gameObject;
 
+        }
+        if("CanJumpInMV".Equals(col.gameObject.tag)) {
+            canjumpinmv = true;
+            intObj = col.gameObject;
         }
         //checkpoint
         if ("Checkpoint".Equals(col.gameObject.tag))
@@ -186,6 +216,7 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
+    //Kill player
     private void BeginKillPlayer()
     {
         //TODO some death animation with smoke
@@ -211,6 +242,7 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
+    //Health depletion
     void TakeDamage(int damage){
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
@@ -219,12 +251,21 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-
+    //Increase coal by i amt
     private void incrementCoal(int i)
     {
         coalCount += i;
         coalText.text = coalCount.ToString();
     }
+
+    //Decrease coal by i amt
+    private void decrementCoal(int i)
+    {
+        coalCount -= i;
+        coalText.text = coalCount.ToString();
+    }
+
+    //Set coalcount to zero
     private void refreshCoal()
     {
         coalCount = 0;
