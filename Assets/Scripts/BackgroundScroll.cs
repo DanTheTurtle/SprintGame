@@ -13,6 +13,6 @@ public class BackgroundScroll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(player.transform.position.x * xFactor, player.transform.position.y * yFactor, transform.position.z);
+        transform.position = new Vector3(player.transform.position.x * xFactor, player.transform.position.y * yFactor + 1.7f, transform.position.z);
     }
 }
