@@ -32,8 +32,9 @@ TagManager:
   - Player
   - Checkpoint
   - PlayerTutorial
+  - Combustable
+  - WillNotBreak
   - Explosive
-  - 
   - 
   - 
   - 

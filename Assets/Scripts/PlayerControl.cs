@@ -144,6 +144,13 @@ public class PlayerControl : MonoBehaviour
             incrementCoal(1);
             Destroy(collider.gameObject);
         }
+        else if ("Checkpoint".Equals(collider.gameObject.tag))
+        {
+            currentHealth = maxHealth;
+            healthBar.SetHealth(currentHealth);
+            lastCheckpoint = collider.gameObject.transform;
+            collider.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+        }
     }
 
     //Checks if player has already double jumped
@@ -176,14 +183,7 @@ public class PlayerControl : MonoBehaviour
             intObj = col.gameObject;
         }
         //checkpoint
-        if ("Checkpoint".Equals(col.gameObject.tag))
-        {
-            currentHealth = maxHealth;
-            healthBar.SetHealth(currentHealth);
-            lastCheckpoint = col.gameObject.transform;
-            col.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
-        }
-        else if ("Kill".Equals(col.gameObject.tag))
+         if ("Kill".Equals(col.gameObject.tag))
         {
             BeginKillPlayer();
         }

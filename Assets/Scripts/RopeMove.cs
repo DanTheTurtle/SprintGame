@@ -12,7 +12,6 @@ public class RopeMove : MonoBehaviour
 
     void Start()
     {
-        this.GetComponent<ParticleSystem>().Stop();
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -25,7 +24,6 @@ public class RopeMove : MonoBehaviour
                 rb.velocity = (endpoint.transform.position - col.gameObject.transform.position) * travelTime;
                 rb.gravityScale = 0;
             }
-            Burn();
         }
     }
 
@@ -53,21 +51,5 @@ public class RopeMove : MonoBehaviour
     public void ToggleRope()
     {
         started = !started;
-    }
-
-    private void Burn()
-    {
-        UnityEngine.Debug.Log("on fire");
-        this.GetComponent<ParticleSystem>().Play();
-        Invoke("FinishBurn", 1f);
-    }
-    
-    private void FinishBurn()
-    {
-
-        UnityEngine.Debug.Log("it gone");
-        this.GetComponent<SpriteRenderer>().enabled = false;
-        this.GetComponent<PolygonCollider2D>().enabled = false;
-        Destroy(this.gameObject);
     }
 }
