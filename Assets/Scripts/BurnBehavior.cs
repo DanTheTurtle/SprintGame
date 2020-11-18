@@ -14,14 +14,13 @@ public class BurnBehavior : MonoBehaviour
     void Start()
     {
         this.GetComponent<ParticleSystem>().Stop();
-        int layer = this.gameObject.layer;//? 14 = combustable, 15 = willnotbreak
-        if (tag.Equals("Combustable") || layer == 14)
+        if (tag.Equals("Combustable"))
         {
             burnable = true;
             canIgnite = true;
 
         }
-        else if(tag.Equals("WillNotBreak") || tag.Equals("Checkpoint") || layer == 15)
+        else if(tag.Equals("WillNotBreak") || tag.Equals("Checkpoint"))
         {
             burnable = false;
             canIgnite = true;
@@ -48,14 +47,7 @@ public class BurnBehavior : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if ((col.tag.Equals("Player")) && canIgnite)
-        {
-            Burn();
-        }
-    }
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if((col.collider.tag.Equals("Player") )&& canIgnite)
+        if (canIgnite)
         {
             Burn();
         }

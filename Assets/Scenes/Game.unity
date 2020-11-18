@@ -160,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_RootOrder
-      value: 32
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -218,6 +218,7 @@ Transform:
   - {fileID: 2082616830}
   - {fileID: 1927675615}
   - {fileID: 495775554}
+  - {fileID: 201835185}
   - {fileID: 90900720}
   - {fileID: 1034799962}
   - {fileID: 723590897}
@@ -252,110 +253,9 @@ Transform:
   - {fileID: 1767835426}
   - {fileID: 779276207}
   - {fileID: 671221746}
-  - {fileID: 1756362425}
-  - {fileID: 78278941}
-  - {fileID: 262960089}
-  - {fileID: 266002384}
-  - {fileID: 730270055}
-  - {fileID: 1191765301}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &78278940 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5940285930159760661, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
-  m_PrefabInstance: {fileID: 369331589}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &78278941 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5940285930159760649, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
-  m_PrefabInstance: {fileID: 369331589}
-  m_PrefabAsset: {fileID: 0}
---- !u!232 &78278942
-DistanceJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 78278940}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 24.40709, y: 19.31496}
-  m_AutoConfigureDistance: 1
-  m_Distance: 6.784961
-  m_MaxDistanceOnly: 0
---- !u!199 &78278947
-ParticleSystemRenderer:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 78278940}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_RenderMode: 0
-  m_SortMode: 0
-  m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
-  m_CameraVelocityScale: 0
-  m_VelocityScale: 0
-  m_LengthScale: 2
-  m_SortingFudge: 0
-  m_NormalDirection: 1
-  m_ShadowBias: 0
-  m_RenderAlignment: 1
-  m_Pivot: {x: 0, y: 0, z: 0}
-  m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
-  m_EnableGPUInstancing: 1
-  m_ApplyActiveColorSpace: 1
-  m_AllowRoll: 1
-  m_FreeformStretching: 0
-  m_RotateWithStretchDirection: 1
-  m_VertexStreams: 00010304
-  m_Mesh: {fileID: 0}
-  m_Mesh1: {fileID: 0}
-  m_Mesh2: {fileID: 0}
-  m_Mesh3: {fileID: 0}
-  m_MaskInteraction: 0
 --- !u!1 &87544588
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,6 +554,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8364201317493801596, guid: bd99981fd9d500548b207b6c5117b2fb, type: 3}
   m_PrefabInstance: {fileID: 2135780913}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &201835185 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6340702457485558540, guid: 8494daa25dfedcd40b757c1aff2df26d, type: 3}
+  m_PrefabInstance: {fileID: 6340702457552191933}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &245653220 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3218114635781745596, guid: 61869d2304dc92946af108f599a7b385, type: 3}
@@ -677,37 +582,195 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5940285930159760649, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
   m_PrefabInstance: {fileID: 1416627049}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &262960088 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5940285930159760661, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
-  m_PrefabInstance: {fileID: 2021627595}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &262960089 stripped
+--- !u!1001 &270000703
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 68617070}
+    m_Modifications:
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 30.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.231726
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_RootOrder
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712391, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_Name
+      value: Coal (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8409f22d867797343b778add24602cfd, type: 3}
+--- !u!4 &270000704 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5940285930159760649, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
-  m_PrefabInstance: {fileID: 2021627595}
+  m_CorrespondingSourceObject: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+  m_PrefabInstance: {fileID: 270000703}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &262960093
-MonoBehaviour:
+--- !u!4 &314885334 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5666996296851357272, guid: 4eb81eafc078f424eb452fb7f2982cfa, type: 3}
+  m_PrefabInstance: {fileID: 5666996297157294734}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &320834355
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 262960088}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 320834356}
+  - component: {fileID: 320834357}
+  m_Layer: 11
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &320834356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320834355}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.05, y: 0.14, z: -1.33}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 342548301}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &320834357
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320834355}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ef22a0603150d48a0cae021ead662c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BurnTime: 2
---- !u!199 &262960094
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 7.92
+  m_Range: 8.72
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 1.4876e-41, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!1 &342548297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 342548301}
+  - component: {fileID: 342548300}
+  - component: {fileID: 342548299}
+  - component: {fileID: 342548298}
+  - component: {fileID: 342548302}
+  - component: {fileID: 342548304}
+  - component: {fileID: 342548303}
+  m_Layer: 11
+  m_Name: Player
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!199 &342548298
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 262960088}
+  m_GameObject: {fileID: 342548297}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -766,15 +829,15 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!198 &262960095
+--- !u!198 &342548299
 ParticleSystem:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 262960088}
+  m_GameObject: {fileID: 342548297}
   serializedVersion: 6
-  lengthInSec: 2
+  lengthInSec: 5
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -902,7 +965,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 2.465951
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1018,7 +1081,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1340,7 +1403,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.3
+      scalar: 0.1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1537,13 +1600,13 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 270
+      value: 180
       mode: 0
       spread: 0
       speed:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 2
+        scalar: 1
         minScalar: 1
         maxCurve:
           serializedVersion: 2
@@ -1599,7 +1662,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 7
+      scalar: 20
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -2037,9 +2100,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.9811321, g: 0.8852115, b: 0, a: 0.41568628}
-        key1: {r: 1, g: 0.62911344, b: 0, a: 0.8627451}
-        key2: {r: 1, g: 0.07556336, b: 0, a: 0.6901961}
+        key0: {r: 0.9811321, g: 0.8852115, b: 0, a: 0.8627451}
+        key1: {r: 1, g: 0.62911344, b: 0, a: 0.25882354}
+        key2: {r: 1, g: 0.07556336, b: 0, a: 0.25882354}
         key3: {r: 0.066037714, g: 0.060742237, b: 0.060742237, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -2048,22 +2111,22 @@ ParticleSystem:
         ctime0: 0
         ctime1: 19853
         ctime2: 35852
-        ctime3: 50115
+        ctime3: 53585
         ctime4: 0
         ctime5: 0
         ctime6: 0
         ctime7: 0
-        atime0: 2313
-        atime1: 14264
-        atime2: 57054
-        atime3: 58789
-        atime4: 62066
+        atime0: 51657
+        atime1: 60138
+        atime2: 65535
+        atime3: 0
+        atime4: 0
         atime5: 0
         atime6: 0
         atime7: 0
         m_Mode: 0
         m_NumColorKeys: 4
-        m_NumAlphaKeys: 3
+        m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -2275,7 +2338,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 6
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2434,7 +2497,7 @@ ParticleSystem:
     orbitalY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 30
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2804,8 +2867,8 @@ ParticleSystem:
         m_RotationOrder: 4
     inWorldSpace: 1
   InheritVelocityModule:
-    enabled: 0
-    m_Mode: 1
+    enabled: 1
+    m_Mode: 0
     m_Curve:
       serializedVersion: 2
       minMaxState: 0
@@ -2916,7 +2979,7 @@ ParticleSystem:
         m_RotationOrder: 4
     m_Range: {x: 0, y: 1}
   ForceModule:
-    enabled: 1
+    enabled: 0
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -2973,7 +3036,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -9
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -4553,7 +4616,7 @@ ParticleSystem:
       emitProbability: 1
   LightsModule:
     enabled: 1
-    ratio: 0.4
+    ratio: 1
     light: {fileID: 320834357}
     randomDistribution: 1
     color: 0
@@ -4562,7 +4625,7 @@ ParticleSystem:
     rangeCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.86
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4615,7 +4678,7 @@ ParticleSystem:
     intensityCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.35
+      scalar: 0.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4665,7 +4728,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    maxLights: 5
+    maxLights: 50
   TrailModule:
     enabled: 0
     mode: 0
@@ -5480,50 +5543,26 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!1 &266002383 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5940285930159760661, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
-  m_PrefabInstance: {fileID: 472715180}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &266002384 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5940285930159760649, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
-  m_PrefabInstance: {fileID: 472715180}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &266002389
-MonoBehaviour:
+--- !u!212 &342548300
+SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 266002383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ef22a0603150d48a0cae021ead662c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BurnTime: 2
---- !u!199 &266002390
-ParticleSystemRenderer:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 266002383}
-  m_Enabled: 1
+  m_GameObject: {fileID: 342548297}
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5536,7 +5575,7 @@ ParticleSystemRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -5544,33 +5583,21 @@ ParticleSystemRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_RenderMode: 0
-  m_SortMode: 0
-  m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
-  m_CameraVelocityScale: 0
-  m_VelocityScale: 0
-  m_LengthScale: 2
-  m_SortingFudge: 0
-  m_NormalDirection: 1
-  m_ShadowBias: 0
-  m_RenderAlignment: 1
-  m_Pivot: {x: 0, y: 0, z: 0}
-  m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
-  m_EnableGPUInstancing: 1
-  m_ApplyActiveColorSpace: 1
-  m_AllowRoll: 1
-  m_FreeformStretching: 0
-  m_RotateWithStretchDirection: 1
-  m_VertexStreams: 00010304
-  m_Mesh: {fileID: 0}
-  m_Mesh1: {fileID: 0}
-  m_Mesh2: {fileID: 0}
-  m_Mesh3: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f2e4e9cef42ad144b91a9e6ac4c39d02, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+<<<<<<< HEAD
 --- !u!198 &266002391
 ParticleSystem:
+=======
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
   m_SpriteSortPoint: 0
 --- !u!4 &342548301
 Transform:
@@ -5580,6 +5607,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342548297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -14.3, y: 6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5592,26 +5620,191 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &342548302
 MonoBehaviour:
+=======
+  m_LocalPosition: {x: 51.9, y: 10.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1621335722}
+  - {fileID: 320834356}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &342548302
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 266002383}
-  serializedVersion: 6
-  lengthInSec: 2
-  simulationSpeed: 1
-  stopAction: 0
-  cullingMode: 0
-  ringBufferMode: 0
-  ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
-  prewarm: 0
-  playOnAwake: 1
-  useUnscaledTime: 0
-  autoRandomSeed: 1
-  useRigidbodyForVelocity: 1
-  startDelay:
+  m_GameObject: {fileID: 342548297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b23e6d1872b034e84b0ecc6d4b900a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundMask:
     serializedVersion: 2
+    m_Bits: 256
+  maxHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 454822413}
+  coalText: {fileID: 677892006}
+  message: {fileID: 1607473522}
+--- !u!58 &342548303
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342548297}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!50 &342548304
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342548297}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 3.5
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!1001 &387926895
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 68617070}
+    m_Modifications:
+    - target: {fileID: 721591673127419788, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_Name
+      value: Square
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 41.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.463451
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+--- !u!4 &387926896 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+  m_PrefabInstance: {fileID: 387926895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &454822411
+GameObject:
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 454822412}
+  - component: {fileID: 454822414}
+  - component: {fileID: 454822413}
+  - component: {fileID: 454822415}
+  m_Layer: 5
+  m_Name: Health Bar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &454822412
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454822411}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 87544589}
+  - {fileID: 1096563508}
+  m_Father: {fileID: 1876704954}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 83.42, y: -17.39}
+  m_SizeDelta: {x: 171.34988, y: 33.62813}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &454822413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454822411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd4ef43587dcff438341ea3948c7d54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 454822414}
+  gradient:
+    serializedVersion: 2
+<<<<<<< HEAD
     minMaxState: 0
     scalar: 0
     minScalar: 0
@@ -10464,10 +10657,43 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &320834356
 Transform:
+=======
+    key0: {r: 0.2117647, g: 0.23919904, b: 0.7921569, a: 1}
+    key1: {r: 0.57366645, g: 0.7924528, b: 0.21306513, a: 1}
+    key2: {r: 0.94509804, g: 0.8803131, b: 0.09411764, a: 0}
+    key3: {r: 0.9433962, g: 0.5563951, b: 0.09344962, a: 0}
+    key4: {r: 0.9607843, g: 0.18046694, b: 0.06666665, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 6554
+    ctime1: 16384
+    ctime2: 32768
+    ctime3: 49151
+    ctime4: 65535
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 5
+    m_NumAlphaKeys: 2
+  fill: {fileID: 87544590}
+--- !u!114 &454822414
+MonoBehaviour:
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 320834355}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.05, y: 0.14, z: -1.33}
@@ -10477,19 +10703,75 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &320834357
+=======
+  m_GameObject: {fileID: 454822411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 0
+  m_TargetGraphic: {fileID: 0}
+  m_FillRect: {fileID: 87544589}
+  m_HandleRect: {fileID: 0}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 100
+  m_WholeNumbers: 0
+  m_Value: 100
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!108 &454822415
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 320834355}
+=======
+  m_GameObject: {fileID: 454822411}
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+<<<<<<< HEAD
   m_Intensity: 7.92
   m_Range: 8.72
+=======
+  m_Intensity: 1
+  m_Range: 10
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -10530,6 +10812,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
+<<<<<<< HEAD
   m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
@@ -10538,6 +10821,21 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1 &342548297
+=======
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &495775554 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2233089125275377419, guid: 578e980cdb220f442ae9251e84e74118, type: 3}
+  m_PrefabInstance: {fileID: 2233089124781224009}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &511335343
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10545,6 +10843,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 342548301}
   - component: {fileID: 342548300}
   - component: {fileID: 342548299}
@@ -10555,10 +10854,20 @@ GameObject:
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
+=======
+  - component: {fileID: 511335344}
+  - component: {fileID: 511335346}
+  - component: {fileID: 511335345}
+  - component: {fileID: 511335347}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!199 &342548298
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -15899,6 +16208,10 @@ GameObject:
   m_IsActive: 1
 --- !u!224 &511335344
 RectTransform:
+=======
+--- !u!224 &511335344
+RectTransform:
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -16149,7 +16462,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 31
+=======
+      value: 32
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -16216,7 +16533,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 24
+=======
+      value: 25
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -16270,7 +16591,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 68617070}
+<<<<<<< HEAD
   m_RootOrder: 35
+=======
+  m_RootOrder: 36
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &654000019
 BoxCollider2D:
@@ -16327,7 +16652,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 68617070}
+<<<<<<< HEAD
   m_RootOrder: 40
+=======
+  m_RootOrder: 41
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &671221747
 BoxCollider2D:
@@ -16475,7 +16804,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 10
+=======
+      value: 11
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
       objectReference: {fileID: 0}
     - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -16525,7 +16858,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 68617070}
+<<<<<<< HEAD
   m_RootOrder: 9
+=======
+  m_RootOrder: 10
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &723590898
 BoxCollider2D:
@@ -16553,6 +16890,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 25}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 --- !u!1 &730270054 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5940285930159760661, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
@@ -21356,6 +21694,8 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+=======
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
 --- !u!1 &779276206
 GameObject:
   m_ObjectHideFlags: 0
@@ -21385,7 +21725,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 68617070}
+<<<<<<< HEAD
   m_RootOrder: 39
+=======
+  m_RootOrder: 40
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &779276208
 BoxCollider2D:
@@ -21405,6 +21749,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
     oldSize: {x: 0, y: 0}
+<<<<<<< HEAD
     newSize: {x: 0, y: 0}
     adaptiveTilingThreshold: 0
     drawMode: 0
@@ -21538,6 +21883,17 @@ Transform:
   m_PrefabInstance: {fileID: 842134347}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &869721818
+=======
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 11.50206, y: 14.27721}
+  m_EdgeRadius: 0
+--- !u!1001 &787926013
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -21546,11 +21902,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: 36.59
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_LocalPosition.y
       value: 8.57
+=======
+      value: 3.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.37
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21574,7 +21938,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 30
+=======
+      value: 24
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -21590,6 +21958,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712391, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_Name
+<<<<<<< HEAD
       value: Coal (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -21605,12 +21974,25 @@ Transform:
   m_PrefabInstance: {fileID: 1571190733}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &904472736
+=======
+      value: Coal (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8409f22d867797343b778add24602cfd, type: 3}
+--- !u!4 &787926014 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+  m_PrefabInstance: {fileID: 787926013}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &842134347
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 68617070}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 721591673127419785, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -21718,12 +22100,71 @@ Transform:
   m_PrefabInstance: {fileID: 721591672362661077}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1041100864
+=======
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 24.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.231726
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_RootOrder
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712391, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_Name
+      value: Coal (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8409f22d867797343b778add24602cfd, type: 3}
+--- !u!4 &842134348 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+  m_PrefabInstance: {fileID: 842134347}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &869721818
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 68617070}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 966842840726301934, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
       propertyPath: m_Offset.x
       value: 0.6063132
@@ -21924,6 +22365,130 @@ Transform:
   m_PrefabInstance: {fileID: 1518169825}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1096563507
+=======
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 36.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.231726
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_RootOrder
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227111361115712391, guid: 8409f22d867797343b778add24602cfd, type: 3}
+      propertyPath: m_Name
+      value: Coal (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8409f22d867797343b778add24602cfd, type: 3}
+--- !u!4 &869721819 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+  m_PrefabInstance: {fileID: 869721818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &883604366 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+  m_PrefabInstance: {fileID: 1571190733}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &904472736
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 68617070}
+    m_Modifications:
+    - target: {fileID: 721591673127419785, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 27f5e18d943a13242b2fde9e1a656b76, type: 2}
+    - target: {fileID: 721591673127419788, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_Name
+      value: Square (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.2317257
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+--- !u!1 &983493740
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21931,23 +22496,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1096563508}
   - component: {fileID: 1096563510}
   - component: {fileID: 1096563509}
   - component: {fileID: 1096563511}
   m_Layer: 5
   m_Name: Border
+=======
+  - component: {fileID: 983493741}
+  - component: {fileID: 983493742}
+  m_Layer: 0
+  m_Name: Background
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!224 &1096563508
 RectTransform:
+=======
+--- !u!4 &983493741
+Transform:
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1096563507}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -21962,11 +22540,24 @@ RectTransform:
   m_SizeDelta: {x: 0.2738037, y: -0.266922}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1096563509
+=======
+  m_GameObject: {fileID: 983493740}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 4.2317257}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2128630574}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &983493742
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1096563507}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -22060,12 +22651,30 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1001 &1139613308
+=======
+  m_GameObject: {fileID: 983493740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41ef0a46199292c4b858c3f15af7ea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xFactor: 0.1
+  yFactor: 0.01
+  player: {fileID: 342548297}
+--- !u!4 &1034799962 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
+  m_PrefabInstance: {fileID: 721591672362661077}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1041100864
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 68617070}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 5940285930159760649, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.96
@@ -22240,11 +22849,91 @@ BoxCollider2D:
   m_EdgeRadius: 0
 --- !u!212 &1226604557
 SpriteRenderer:
+=======
+    - target: {fileID: 966842840726301934, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.6063132
+      objectReference: {fileID: 0}
+    - target: {fileID: 966842840726301934, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
+      propertyPath: m_Size.x
+      value: 5.302047
+      objectReference: {fileID: 0}
+    - target: {fileID: 966842840726301934, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
+      propertyPath: m_Offset.y
+      value: 5.769391
+      objectReference: {fileID: 0}
+    - target: {fileID: 966842840726301934, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
+      propertyPath: m_Size.y
+      value: 5.0294304
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005376431286286293, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
+      propertyPath: m_Name
+      value: Rain
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882518126938531238, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.716082
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882518126938531238, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.674881
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882518126938531238, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.2317257
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882518126938531238, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882518126938531238, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882518126938531238, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882518126938531238, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882518126938531238, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882518126938531238, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882518126938531238, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882518126938531238, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
+--- !u!1 &1041679997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2233089125275377416, guid: 578e980cdb220f442ae9251e84e74118, type: 3}
+  m_PrefabInstance: {fileID: 2233089124781224009}
+  m_PrefabAsset: {fileID: 0}
+--- !u!199 &1041679999
+ParticleSystemRenderer:
+  serializedVersion: 6
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1226604555}
+=======
+  m_GameObject: {fileID: 1041679997}
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -22258,7 +22947,10 @@ SpriteRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22272,7 +22964,10 @@ SpriteRenderer:
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
   m_SelectedEditorRenderState: 3
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -22305,6 +23000,7 @@ SpriteRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+<<<<<<< HEAD
 --- !u!198 &1191765308
 ParticleSystem:
   m_Sprite: {fileID: 21300000, guid: 5f14755f7f897824a9eacc5bc5e4cc49, type: 3}
@@ -22320,10 +23016,145 @@ ParticleSystem:
   m_SpriteSortPoint: 0
 --- !u!4 &1226604558
 Transform:
+=======
+--- !u!1 &1047602527
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1047602528}
+  - component: {fileID: 1047602529}
+  m_Layer: 0
+  m_Name: CoalText
+  m_TagString: CoalText
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1047602528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047602527}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.13, y: 5.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 68617070}
+  m_RootOrder: 38
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1047602529
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047602527}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.32302475, y: 1.0468652}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.9381332, y: 3.0937304}
+  m_EdgeRadius: 0
+--- !u!4 &1092020430 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2233089125275377419, guid: 578e980cdb220f442ae9251e84e74118, type: 3}
+  m_PrefabInstance: {fileID: 1518169825}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1096563507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1096563508}
+  - component: {fileID: 1096563510}
+  - component: {fileID: 1096563509}
+  - component: {fileID: 1096563511}
+  m_Layer: 5
+  m_Name: Border
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1096563508
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096563507}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 454822412}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.13690186, y: -0.133461}
+  m_SizeDelta: {x: 0.2738037, y: -0.266922}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1096563509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096563507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9811321, g: 0.96724814, b: 0.96724814, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 303fdd76e92655f469a53d43baf5e008, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1096563510
+CanvasRenderer:
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1191765300}
   serializedVersion: 6
   lengthInSec: 2
@@ -27040,6 +27871,71 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  m_GameObject: {fileID: 1096563507}
+  m_CullTransparentMesh: 0
+--- !u!108 &1096563511
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096563507}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
 --- !u!1001 &1238735803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27077,7 +27973,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 22
+=======
+      value: 23
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -27122,8 +28022,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &1260934689
 Transform:
+=======
+--- !u!224 &1248277694
+RectTransform:
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -27143,6 +28048,7 @@ Transform:
   m_AnchoredPosition: {x: 187.02, y: -18.05}
   m_SizeDelta: {x: 34.77906, y: 33.626102}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1260934688}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -27151,6 +28057,8 @@ Transform:
   m_Father: {fileID: 342548301}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
 --- !u!1001 &1287856819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27188,7 +28096,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 29
+=======
+      value: 30
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -27242,7 +28154,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 68617070}
+<<<<<<< HEAD
   m_RootOrder: 36
+=======
+  m_RootOrder: 37
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1372148686
 BoxCollider2D:
@@ -27307,7 +28223,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 28
+=======
+      value: 29
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -27369,7 +28289,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5940285930159760649, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 34
+=======
+      value: 35
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
       objectReference: {fileID: 0}
     - target: {fileID: 5940285930159760649, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -27383,18 +28307,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 5940285930159760660, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
       propertyPath: m_AutoTiling
       value: 1
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
     - target: {fileID: 5940285930159760661, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
       propertyPath: m_Name
       value: ForJumpIn
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 5940285930159760661, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
       propertyPath: m_TagString
       value: CanJumpInMV
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
 --- !u!1001 &1466058938
@@ -27523,7 +28453,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 11
+=======
+      value: 12
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
       objectReference: {fileID: 0}
     - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -27593,7 +28527,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2233089125275377419, guid: 578e980cdb220f442ae9251e84e74118, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 14
+=======
+      value: 15
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
       objectReference: {fileID: 0}
     - target: {fileID: 2233089125275377419, guid: 578e980cdb220f442ae9251e84e74118, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -27643,7 +28581,11 @@ Transform:
   m_Children:
   - {fileID: 185865534}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 2
+=======
+  m_RootOrder: 1
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1547249641
 MonoBehaviour:
@@ -27660,6 +28602,14 @@ MonoBehaviour:
   xFactor: 0.5
   yFactor: 0.1
   player: {fileID: 342548297}
+<<<<<<< HEAD
+=======
+--- !u!4 &1567256448 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
+  m_PrefabInstance: {fileID: 5227111362410284283}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
 --- !u!1001 &1571190733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27705,7 +28655,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 19
+=======
+      value: 20
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
       objectReference: {fileID: 0}
     - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -27758,7 +28712,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 25
+=======
+      value: 26
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -27893,7 +28851,11 @@ Transform:
   m_LocalScale: {x: 0.636289, y: 0.636289, z: 0.636289}
   m_Children: []
   m_Father: {fileID: 342548301}
+<<<<<<< HEAD
   m_RootOrder: 1
+=======
+  m_RootOrder: 0
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1621335723
 SpriteRenderer:
@@ -28110,7 +29072,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 33
+=======
+      value: 34
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
       objectReference: {fileID: 0}
     - target: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -28135,6 +29101,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5227111361115712379, guid: 8409f22d867797343b778add24602cfd, type: 3}
   m_PrefabInstance: {fileID: 1703259508}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1001 &1721203083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28209,11 +29176,14 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
+=======
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
 --- !u!4 &1727295025 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7882518126938531238, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
   m_PrefabInstance: {fileID: 1041100864}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &1756362424 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5940285930159760661, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
@@ -33017,6 +33987,8 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+=======
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
 --- !u!1 &1765676913
 GameObject:
   m_ObjectHideFlags: 0
@@ -37858,7 +38830,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 68617070}
-  m_RootOrder: 38
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1767835427
 BoxCollider2D:
@@ -37948,7 +38920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7882518126938531238, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7882518126938531238, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -38222,7 +39194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7882518126938531238, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 7882518126938531238, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -38275,7 +39247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6340702457485558540, guid: 8494daa25dfedcd40b757c1aff2df26d, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6340702457485558540, guid: 8494daa25dfedcd40b757c1aff2df26d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -38481,7 +39453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3218114636753947439, guid: 61869d2304dc92946af108f599a7b385, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 3218114636753947439, guid: 61869d2304dc92946af108f599a7b385, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -38497,72 +39469,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61869d2304dc92946af108f599a7b385, type: 3}
---- !u!1001 &2021627595
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 68617070}
-    m_Modifications:
-    - target: {fileID: 5940285930159760649, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 5940285930159760649, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 8.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 5940285930159760649, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.2317257
-      objectReference: {fileID: 0}
-    - target: {fileID: 5940285930159760649, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5940285930159760649, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5940285930159760649, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5940285930159760649, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5940285930159760649, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
-      propertyPath: m_RootOrder
-      value: 43
-      objectReference: {fileID: 0}
-    - target: {fileID: 5940285930159760649, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5940285930159760649, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5940285930159760649, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5940285930159760661, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
-      propertyPath: m_Name
-      value: ForJumpIn (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5940285930159760663, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8686806288847815570, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
-      propertyPath: BurnTime
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
-  m_SourcePrefab: {fileID: 100100000, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
 --- !u!1 &2082616829
 GameObject:
   m_ObjectHideFlags: 0
@@ -38739,7 +39645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 721591673127419791, guid: 01a5e51e911dc4a499a46a098736d217, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -38934,7 +39840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5940285930159760649, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5940285930159760649, guid: 07a7665961849d442ba7d712ec9864b6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -38991,7 +39897,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6340702457485558540, guid: 8494daa25dfedcd40b757c1aff2df26d, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 6
+=======
+      value: 7
+>>>>>>> parent of d87400a... burn works on all objects with ParticleSystems and collider/trigger
       objectReference: {fileID: 0}
     - target: {fileID: 6340702457485558540, guid: 8494daa25dfedcd40b757c1aff2df26d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -39165,7 +40075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7882518126938531238, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7882518126938531238, guid: 3082fce732e2e924aa59fd3d50843724, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
